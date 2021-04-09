@@ -316,6 +316,7 @@
         .then((response) => {
           document.getElementById("formSubmitButton").innerHTML = "Ďakujeme :)"
           alert("Ďakujeme, čoskoro sa ozveme :)")
+          window.location.href = "#dakujeme";
         })
         .catch((error) => {
           document.getElementById("formSubmitButton").innerHTML = "Chyba, skúste neskôr znovu"
