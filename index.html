@@ -39,7 +39,7 @@
             Organická mikrozelenina s donáškou k vašim dverám,<br />pestovaná udržateľne a bez chémie
           </p>
           <a href="#kontakt">
-            <button class="custom-button">Chcem ochutnať</button>
+            <button class="custom-button" onclick="gtag('event', 'tasting_cta_button_click')">Chcem ochutnať</button>
           </a>
         </div>
         <div class="col-12 col-md-4 d-none d-md-flex align-items-center hero-image">
@@ -259,7 +259,7 @@
                       alt="Mikrozelenina je bohatá na živiny">
                   </div>
                   <div>
-                    <h5 class="feature-heading">Sú bohaté na živiny a antioxidanty</h5>
+                    <h5 class="feature-heading">Majú blahodarný vplyv na imunitný systém</h5>
                     <p class="feature-description">Mikrozelenina obsahuje násobne viac vitamínov a minerálov v porovnaní
                       s dospelou zeleninou (až 40x viac)</p>
                   </div>
@@ -273,7 +273,7 @@
                     <img src="/assets/icons/check_circle_custom.svg" width="32px" alt="Mikrozelenina bez chémie">
                   </div>
                   <div>
-                    <h5 class="feature-heading">Pestované lokálne bez chémie</h5>
+                    <h5 class="feature-heading">Sú pestované lokálne bez chémie</h5>
                     <p class="feature-description">Pri pestovaní mikrozeleniny nepoužívame žiadne postreky ani hnojivá
                     </p>
                   </div>
@@ -287,7 +287,7 @@
                     <img src="/assets/icons/check_circle_custom.svg" width="32px" alt="Dokonalá chuť mikrozeleniny">
                   </div>
                   <div>
-                    <h5 class="feature-heading">Majú jedinečnú chuť a vzhľad</h5>
+                    <h5 class="feature-heading">Vynikajú jedinečnou chuťou a vzhľadom</h5>
                     <p class="feature-description">Mikrozelenina nielen že skvele chutí, ale aj dobre vyzerá</p>
                   </div>
                 </div>
@@ -377,9 +377,9 @@
 
       fetch(scriptURL, { method: "POST", body: formBody })
         .then((response) => {
+          gtag('event', 'tasting_form_submit')
           document.getElementById("formSubmitButton").innerHTML = "Ďakujeme :)"
           alert("Ďakujeme, čoskoro sa ozveme :)")
-          window.location.href = "#dakujeme";
         })
         .catch((error) => {
           document.getElementById("formSubmitButton").innerHTML = "Chyba, skúste neskôr znovu"
