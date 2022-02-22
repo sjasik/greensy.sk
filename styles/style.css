@@ -355,6 +355,8 @@ select.lang-picker {
   border: none;
   outline: none;
   margin-right: 8px;
+  background-color: unset;
+  border: none;
 }
 
 select.lang-picker option {
